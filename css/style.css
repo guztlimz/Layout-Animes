@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Poppins Black';
+    src: url('../fonts/Poppins/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraBold';
+    src: url('../fonts/Poppins/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraLight';
+    src: url('../fonts/Poppins/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url('../fonts/Poppins/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('../fonts/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Thin';
+    src: url('../fonts/Poppins/Poppins-Thin.ttf');
+}
+
+:root{
+    --mainColor: rgb(0, 0, 0);
+    --ContrastColor: rgb(10, 10, 10);
+}
+
+*{
+    margin: 0 auto;
+    user-select: none;
+    transition: 0.5s;
+}
+
+html{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainColor);
+}
+
+.box{
+    height: 800px;
+    width: 95%;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    background: var(--ContrastColor);
+    position: relative;
+    overflow: hidden;
+    border-top: solid 5px rgb(212, 0, 64);
+}
+
+.options{
+    position: absolute;
+    color: white;
+    font-family: 'Poppins Regular';
+    margin: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+
+}
+.optionsName{
+    text-align: center;
+    margin: 0;
+    width: 130px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.active{
+    background-color: rgb(212, 0, 64);
+}
+
+.optionsName p{
+    position: relative;
+    left: 0;
+}
+
+.optionsName:hover{
+    background-color: rgb(212, 0, 64);
+}
+
+.optionsName:hover > p{
+    left: -10px;
+}
+
+.optionsBackShape{
+    position: absolute;
+    height: 100%;
+    width: 130px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.BackShapeColored{
+    position: absolute;
+    height: 50%;
+    width: 2px;
+    z-index: 1;
+    margin-right: 130px;
+    background-color: rgb(212, 0, 64);
+}
+
+.textBox{
+    position: absolute;
+    width: 500px;
+    top: 30%;
+    left: 5%;
+    z-index: 2;
+}
+
+.biography{
+    color: white;
+    font-family: 'Poppins Light';
+    word-wrap: break-word;
+    line-height: 20px;
+}
+
+.viewMore{
+    color: rgb(212, 0, 64);
+    font-family: 'Poppins Medium';
+    position: relative;
+    left: 0px;
+    text-decoration: none;
+}
+.viewMore:hover{
+    cursor: pointer;
+    color: rgb(150, 0, 45);
+    left: 5px;
+}
+
+.boxElement{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    top: 20%;
+    pointer-events: none;
+}
+
+.boxElement img{
+    position: absolute;
+    left: 50%;
+    top:20%;
+}
+
+.ajuste img{
+    left: 40%;
+}
+
+.boxWallpaper{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/goku.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter:opacity(3%) blur(0px) grayscale(100%);;
+    z-index: 1;
+}
+
+.tanjiro{
+    background-image: url(../img/tanjiro.jpg);
+}
+
+.tempest{
+    background-image: url(../img/rimuru.jpg);
+}
+
+.titleBox{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    margin: 0;
+    z-index: 2;
+}
+
+.title{
+    position: absolute;
+    color: white;
+    font-family: 'Poppins SemiBold';
+    font-size: 100px;
+}
+
+.subtitle{
+    position: absolute;
+    color: white;
+    font-family: 'Poppins Regular';
+    font-size: 30px;
+}
+
+@media(max-width:1050px)
+{
+    .boxElement{
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        top: 20%;
+        pointer-events: none;
+    }
+    
+    .boxElement img{
+        position: absolute;
+        left: 10%;
+        height: 500px;
+    }
+
+    .ajuste img{
+        left: 0;
+    }
+
+    .textBox{
+        top: 70%;
+    }
+    .box{
+        height: 1100px;
+    }
+}
+
+@media(max-width:750px){
+
+    .options{
+        position: absolute;
+        color: white;
+        font-family: 'Poppins Regular';
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+        z-index: 2;
+        align-items:flex-start;
+    }
+    .optionsName{
+    }
+
+    .optionsBackShape{
+        position: absolute;
+        height: 0%;
+        width: 0px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.452);
+    }
+    
+    .BackShapeColored{
+        position: absolute;
+        height: 0%;
+        width: 0px;
+        z-index: 1;
+        margin-right: 130px;
+        background-color: rgb(212, 0, 64);
+    }
+
+    .boxElement img{
+        left: 10%;
+    }
+
+    .ajuste img{
+        left: -15%;
+    }
+
+    .titleBox{
+        top: 130px;
+    }
+
+    .title{
+        font-size: 70px;
+    }
+    .subtitle{
+        font-size:20px
+    }
+
+    .textBox{
+        width: 80%;
+    }
+
+    .box{
+        height: 1300px;
+    }
+}
+
+@media(max-width:420px){
+
+    .titleBox{
+        left: 20px;
+    }
+
+    .title{
+        font-size: 60px;
+    }
+    .subtitle{
+        font-size:15px
+    }
+
+    .textBox{
+        top: 60%;
+    }
+
+
+    .boxElement img{
+        height: 400px;
+    }
+
+}
