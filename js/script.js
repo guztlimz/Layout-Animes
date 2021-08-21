@@ -1,20 +1,51 @@
-let input = document.querySelectorAll('input')
-let label = document.querySelectorAll('label')
-let line = document.querySelectorAll('.line')
+let sobreOption = document.querySelectorAll('.sobreOption')
+let poderesOption = document.querySelectorAll('.poderesOption')
+let famaOption = document.querySelectorAll('.famaOption')
 
-for(let i = 0;i<input.length;i++){
-    input[i].addEventListener('focusin',function(){
-        label[i].style.top='0'
-        line[i].style.backgroundColor = 'var(--ContrastColor)'
+let sobre = document.querySelectorAll('.sobre')
+let poderes = document.querySelectorAll('.poderes')
+let Fama = document.querySelectorAll('.Fama')
 
+
+
+for(let i=0; i<3;i++){
+
+
+    sobreOption[i].addEventListener("click",function(){
+        if(!sobreOption[i].classList.contains(" active ")){
+            sobreOption[i].classList += " active "
+            poderesOption[i].classList.remove("active")
+            famaOption[i].classList.remove("active")
+
+            sobre[i].style.opacity = 1
+            poderes[i].style.opacity = 0
+            Fama[i].style.opacity = 0
+        }
     })
-    input[i].addEventListener('focusout',function(){
-        console.log(input[i].textContent)
-            if(input[i].value == ''){
-                console.log(input[i].value)
-                console.log('FocusOut')
-                label[i].style.top='18px'
-                line[i].style.backgroundColor = 'var(--mainColor)'
-            }
+
+    poderesOption[i].addEventListener("click",function(){
+        if(!poderesOption[i].classList.contains(" active ")){
+            poderesOption[i].classList += " active "
+            sobreOption[i].classList.remove("active")
+            famaOption[i].classList.remove("active")
+
+            sobre[i].style.opacity = 0
+            poderes[i].style.opacity = 1
+            Fama[i].style.opacity = 0
+        }
+    })
+
+    famaOption[i].addEventListener("click",function(){
+        if(!famaOption[i].classList.contains(" active ")){
+            famaOption[i].classList += " active "
+            sobreOption[i].classList.remove("active")
+            poderesOption[i].classList.remove("active")
+
+            sobre[i].style.opacity = 0
+            poderes[i].style.opacity = 0
+            Fama[i].style.opacity = 1
+        }
     })
 }
+
+
